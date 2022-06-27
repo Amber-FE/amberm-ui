@@ -1,0 +1,87 @@
+.amber-button {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: 0 12px;
+  color: $white;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all $animation-duration $animation-timing-fun;
+  user-select: none;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  &-default {
+    color: $black;
+    background-color: $button-default-background-color;
+    border: $button-border-width solid $button-default-border-color
+  }
+  &-primary {
+    background-color: $button-primary-background-color;
+    border: $button-border-width solid $button-primary-border-color
+  }
+  &-success {
+    background-color: $button-success-background-color;
+    border: $button-border-width solid $button-success-border-color
+  }
+  &-info {
+    background-color: $button-info-background-color;
+    border: $button-border-width solid $button-info-border-color
+  }
+  &-warning {
+    background-color: $button-warning-background-color;
+    border: $button-border-width solid $button-warning-border-color
+  }
+  &-danger {
+    background-color: $button-danger-background-color;
+    border: $button-border-width solid $button-danger-border-color
+  }
+  &-round {
+    border-radius: 25px;
+  }
+  &-disabled {
+    opacity: 0.5;
+  }
+  &-normal, &-large {
+    font-size: $font-size-2;
+  }
+  &-small, &-mini {
+    font-size: $font-size-1;
+  }
+  &-normal {
+    height: $button-normal-height;
+    line-height: $button-normal-line-height;
+  }
+  &-large {
+    height: $button-large-height;
+    line-height: $button-large-line-height;
+  }
+  &-small {
+    height: $button-small-height;
+    line-height: $button-small-line-height;
+  }
+  &-mini {
+    height: $button-mini-height;
+    line-height: $button-mini-line-height;
+  }
+  &-normal:not(:last-child), &-large:not(:last-child), &-small:not(:last-child), &-mini:not(:last-child) {
+    margin-right: 10px;
+  }
+  &-loading {
+    position: relative;
+    display: flex;
+    align-items: center;
+    &--spinner {
+      animation: rotating 2s linear infinite;
+      display: grid;
+    }
+    &--text {
+      padding-left: 6px;
+    }
+  }
+}
