@@ -1,14 +1,14 @@
 // 引入组件
-import Button from './button'
-import Icon from './icon'
-import Cell from './cell'
-import CellGround from './cell-ground'
-import Popup from './popup'
-import Navbar from './navbar'
-import Divider from './divider'
-import Sticky from './sticky'
-import Row from './row'
-import Col from './col'
+import Button from './components/button'
+import Icon from './components/icon'
+import Cell from './components/cell'
+import CellGround from './components/cell-ground'
+import Popup from './components/popup'
+import Navbar from './components/navbar'
+import Divider from './components/divider'
+import Sticky from './components/sticky'
+import Row from './components/row'
+import Col from './components/col'
 
 // 存放组件的数组
 const components = [Button, Icon, Cell, CellGround, Popup, Navbar, Divider, Sticky, Row, Col]
