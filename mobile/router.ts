@@ -35,9 +35,9 @@ const findComponentName = (name: string) => {
 }
 
 /** vite */
-const modulesPage = import.meta.glob('/packages/**/demo.vue')
+const modulesPage = import.meta.glob('/packages/components/**/demo.vue')
 for (const path in modulesPage) {
-  const name = (/packages\/(.*)\/demo.vue/.exec(path) as any[])[1]
+  const name = (/packages\/components\/(.*)\/demo.vue/.exec(path) as any[])[1]
   routes.push({
     path: `/${name}`,
     component: modulesPage[path],
