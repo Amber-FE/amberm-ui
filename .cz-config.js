@@ -22,11 +22,7 @@ module.exports = {
     ['components', '组件相关'],
     ['utils', 'utils 相关'],
     ['styles', '样式相关'],
-    ['deps', '项目依赖'],
-    ['auth', '对 auth 修改'],
-    ['other', '其他修改'],
-    // 如果选择 custom，后面会让你再输入一个自定义的 scope。也可以不设置此项，把后面的 allowCustomScopes 设置为 true
-    ['custom', '以上都不是？我要自定义']
+    ['button', '按钮组件'],
   ].map(([value, description]) => {
     return {
       value,
@@ -34,25 +30,6 @@ module.exports = {
     }
   }),
 
-  // 是否允许自定义填写 scope，在 scope 选择的时候，会有 empty 和 custom 可以选择。
-  // allowCustomScopes: true,
-
-  // allowTicketNumber: false,
-  // isTicketNumberRequired: false,
-  // ticketNumberPrefix: 'TICKET-',
-  // ticketNumberRegExp: '\\d{1,5}',
-
-  // 针对每一个 type 去定义对应的 scopes，例如 fix
-  /*
-  scopeOverrides: {
-    fix: [
-      { name: 'merge' },
-      { name: 'style' },
-      { name: 'e2eTest' },
-      { name: 'unitTest' }
-    ]
-  },
-  */
 
   // 交互提示信息
   messages: {
