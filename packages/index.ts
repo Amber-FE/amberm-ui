@@ -1,3 +1,5 @@
+import './styles/common.scss'
+import './styles/variables.scss'
 // 引入组件
 import Button from './components/button'
 import Icon from './components/icon'
@@ -9,12 +11,13 @@ import Divider from './components/divider'
 import Sticky from './components/sticky'
 import Row from './components/row'
 import Col from './components/col'
+import { App } from 'vue'
 
 // 存放组件的数组
 const components = [Button, Icon, Cell, CellGround, Popup, Navbar, Divider, Sticky, Row, Col]
 
 // 定义 install 方法，接收 Vue 作为参数。
-const install = (Vue: any) => {
+const install = (Vue: App) => {
   // 判断是否安装
   if (install.installed) {
     return

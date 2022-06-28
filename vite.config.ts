@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import dts from 'vite-plugin-dts'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // const path = require('path')
 
@@ -12,51 +12,20 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: false,
     rollupOptions: {
-      external: ['vue', 'vue-router', 'vitepress', 'less', '@types/node', 'vite-plugin-dts'],
-      input: ['packages/index.ts', 'packages/button/index.ts'],
-      output: [
-        // esm
-        {
-          format: 'es',
-          dir: 'es',
-          entryFileNames: '[name].js',
-          preserveModules: true,
-          preserveModulesRoot: 'packages'
+      // 请确保外部化那些你的库中不需要的依赖
+      external: ['vue'],
+      output: {
+        // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
+        globals: {
+          vue: 'Vue',
         },
-        // cjs
-        {
-          format: 'cjs',
-          dir: 'lib',
-          entryFileNames: '[name].js',
-          preserveModules: true,
-          preserveModulesRoot: 'packages'
-        }
-      ]
+      },
     },
-    lib: {
-      // 入口
-      entry: 'packages/index.ts',
-      name: 'AmberMobile',
-      formats: ['cjs', 'es']
-      // fileName: "[name]",
-    }
   },
 
   plugins: [
     vue(),
-    // 自动构建.d.ts
-    dts({
-      outputDir: 'es'
-      // 入口
-    }),
-    dts({
-      outputDir: 'lib'
-      // 入口
-    }),
-    dts({
-      outputDir: 'dist'
-      // 入口
-    })
+    vueJsx()
   ],
   server: {
     port: 8000,
