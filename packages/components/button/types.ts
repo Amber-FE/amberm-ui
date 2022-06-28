@@ -18,6 +18,10 @@ export const buttonProps = {
     type: String as PropType<ButtonSize>,
     default: "normal",
   },
+  color: {
+    type: String,
+    default: '',
+  },
   disabled: {
     type: Boolean,
     default: false,
@@ -31,6 +35,10 @@ export const buttonProps = {
     default: ''
   },
   round: {
+    type: Boolean,
+    default: false
+  },
+  plain: {
     type: Boolean,
     default: false
   }

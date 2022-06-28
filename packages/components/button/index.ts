@@ -1,9 +1,9 @@
+import { App } from 'vue';
 import Button from './button'
 
-// 提供 install 安装方法，供按需引入
-Button.install = (Vue: any) => {
+Button.install = (app: App) => {
   // 注册组件
-  Vue.component(Button.name, Button)
+  app.component(Button.name, Button)
 }
 
 export default Button
