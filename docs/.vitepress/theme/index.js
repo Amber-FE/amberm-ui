@@ -10,7 +10,7 @@ export default {
   enhanceApp({ app, router, siteData }) {
     app.mixin({
       created() {
-        import('../../../packages/index').then(function (m) {
+        import('../../../packages/components/index').then(function (m) {
           app.use(m.default)
         })
       }
