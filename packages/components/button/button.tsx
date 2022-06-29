@@ -1,9 +1,10 @@
-import { computed, CSSProperties, defineComponent } from 'vue';
-import { useNameSpace } from '../../utils';
-import { buttonProps } from './types';
-import './button.scss';
+import type { CSSProperties } from 'vue'
+import { computed, defineComponent } from 'vue'
+import { useNameSpace } from '../../utils'
+import { buttonProps } from './types'
+import './button.scss'
 
-const name = useNameSpace('button');
+const name = useNameSpace('button')
 
 export default defineComponent({
   name,
@@ -14,47 +15,47 @@ export default defineComponent({
       [`${name}-${props.type}`]: true,
       [`${name}-round`]: props.round,
       [`${name}-disabled`]: props.disabled,
-      [`${name}-${props.size}`]: props.size,
-    }));
+      [`${name}-${props.size}`]: props.size
+    }))
 
     const renderText = () => {
-      let text = '';
+      let text = ''
       if (props.loadingText) {
-        text = props.loadingText;
+        text = props.loadingText
       } else {
-        text = slots.default ? slots.default() : '';
+        text = slots.default ? slots.default() : ''
       }
-      return <span>{text}</span>;
-    };
+      return <span>{text}</span>
+    }
 
     const getStyle = () => {
-      const { color, plain } = props;
-      const style: CSSProperties = {};
+      const { color, plain } = props
+      const style: CSSProperties = {}
       if (color && plain) {
-        style.color = color;
-        style.background = '#fff';
-        style.borderColor = color;
+        style.color = color
+        style.background = '#fff'
+        style.borderColor = color
       }
-      return style;
-    };
+      return style
+    }
 
     const getAttrs = () => {
-      const { disabled, loading } = props;
+      const { disabled, loading } = props
       return {
         attrs: {
-          disabled: disabled || loading,
-        },
-      };
-    };
+          disabled: disabled || loading
+        }
+      }
+    }
 
     return () => {
-      const { loading } = props;
+      const { loading } = props
       return (
         <button class={classes.value} {...getAttrs()} style={getStyle()}>
-          { loading && <amber-icon name="loading" /> }
-          { renderText() }
+          {loading && <amber-icon name="loading" />}
+          {renderText()}
         </button>
-      );
-    };
-  },
-});
+      )
+    }
+  }
+})

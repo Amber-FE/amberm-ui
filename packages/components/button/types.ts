@@ -1,30 +1,25 @@
-import { PropType } from "vue";
+import type { PropType } from 'vue'
 
-export type ButtonType =
-  | "default"
-  | "primary"
-  | "success"
-  | "warning"
-  | "danger";
+export type ButtonType = 'default' | 'primary' | 'success' | 'warning' | 'danger'
 
-export type ButtonSize = 'normal' | 'large' | 'small' | 'mini';
+export type ButtonSize = 'normal' | 'large' | 'small' | 'mini'
 
 export const buttonProps = {
   type: {
     type: String as PropType<ButtonType>,
-    default: "default",
+    default: 'default'
   },
   size: {
     type: String as PropType<ButtonSize>,
-    default: "normal",
+    default: 'normal'
   },
   color: {
     type: String,
-    default: '',
+    default: ''
   },
   disabled: {
     type: Boolean,
-    default: false,
+    default: false
   },
   loading: {
     type: Boolean,
@@ -42,4 +37,4 @@ export const buttonProps = {
     type: Boolean,
     default: false
   }
-};
+}

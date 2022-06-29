@@ -48,6 +48,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
+  name: 'ButtonDemo',
   setup() {
     const methods = {
       handleClick(e: Event) {

@@ -1,3 +1,3 @@
-export function useNameSpace(name: String) {
-    return `am-${name}`
+export function useNameSpace(name: string) {
+  return `am-${name}`
 }
