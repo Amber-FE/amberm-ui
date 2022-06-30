@@ -1,8 +1,10 @@
 import type { App } from 'vue'
 
-import * as component from './components'
-
 import '../styles/index.scss'
+
+import Button from './button'
+
+const component = [Button]
 
 const version = '0.0.1'
 
@@ -11,8 +13,8 @@ const install = (app: App) => {
     return
   }
 
-  Object.keys(component).forEach((key) => {
-    app.component(component[key].name, component[key])
+  component.forEach((el) => {
+    app.component(el.name, el)
   })
 }
 
@@ -21,6 +23,8 @@ install.installed = false
 if (typeof window !== 'undefined' && (window as any).Vue) {
   install((window as any).Vue)
 }
+
+export { Button }
 
 export default {
   version,

@@ -18,13 +18,11 @@ export default defineComponent({
     }))
 
     const renderText = () => {
-      let text = ''
       if (props.loadingText) {
-        text = props.loadingText
+        return <span>{props.loadingText}</span>
       } else {
-        text = slots.default ? slots.default() : ''
+        return <span>{slots.default ? slots.default() : ''}</span>
       }
-      return <span>{text}</span>
     }
 
     const getStyle = () => {
