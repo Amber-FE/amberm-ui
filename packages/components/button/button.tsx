@@ -2,7 +2,6 @@ import type { CSSProperties } from 'vue'
 import { computed, defineComponent } from 'vue'
 import { useNameSpace } from '../../utils'
 import { buttonProps } from './types'
-import './button.scss'
 
 const name = useNameSpace('button')
 

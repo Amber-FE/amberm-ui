@@ -8,7 +8,7 @@ import global from 'glob'
 const dirPath = 'packages/components'
 
 const list = {
-  index: resolve(`./packages/index.ts`)
+  index: resolve(`./packages/components/index.ts`)
 }
 
 const files = global.sync(`${dirPath}/**/index.ts`)
