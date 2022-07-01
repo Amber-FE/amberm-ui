@@ -48,7 +48,7 @@ export default defineComponent({
     return () => {
       const { loading } = props
       return (
-        <button class={classes.value} {...getAttrs()} style={getStyle()}>
+        <button class={classes.value} style={getStyle()}>
           {loading && <amber-icon name="loading" />}
           {renderText()}
         </button>

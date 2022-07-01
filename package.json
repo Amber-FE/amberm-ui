@@ -1,7 +1,7 @@
 {
   "name": "amberm-ui",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/index.min.js",
   "module": "dist/index.min.js",
   "files": [
@@ -15,7 +15,7 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "rollup": "rollup -c",
+    "rollup": "rollup -c ./script/rollup.config.js",
     "lint:fix": "eslint packages --fix --ext .ts,.tsx",
     "prepare": "husky install"
   },
