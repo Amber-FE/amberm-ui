@@ -18,13 +18,11 @@ export default defineComponent({
     }))
 
     const renderText = () => {
-      let text = ''
       if (props.loadingText) {
-        text = props.loadingText
+        return <span>{props.loadingText}</span>
       } else {
-        text = slots.default ? slots.default() : ''
+        return <span>{slots.default ? slots.default() : ''}</span>
       }
-      return <span>{text}</span>
     }
 
     const getStyle = () => {
@@ -50,7 +48,7 @@ export default defineComponent({
     return () => {
       const { loading } = props
       return (
-        <button class={classes.value} {...getAttrs()} style={getStyle()}>
+        <button class={classes.value} style={getStyle()}>
           {loading && <amber-icon name="loading" />}
           {renderText()}
         </button>

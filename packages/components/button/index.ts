@@ -1,8 +1,8 @@
-import { App } from 'vue'
+import type { App } from 'vue'
 
 import Button from './button'
 
-import './button.scss'
+import './style/index.scss'
 
 Button.install = (app: App) => {
   // 注册组件
