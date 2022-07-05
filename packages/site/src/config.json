@@ -1,0 +1,101 @@
+{
+  "docs": {
+    "name": "开发指南",
+    "packages": [
+      {
+        "name": "intro",
+        "cName": "介绍",
+        "show": true
+      },
+      {
+        "name": "start",
+        "cName": "快速上手",
+        "show": true
+      }
+    ]
+  },
+  "nav": [
+    {
+      "name": "基础组件",
+      "enName": "base",
+      "packages": [
+        {
+          "name": "Button",
+          "sort": 1,
+          "cName": "按钮",
+          "type": "component",
+          "show": true,
+          "desc": "按钮用于触发一个操作，如提交表单。"
+        },
+        {
+          "name": "Icon",
+          "sort": 1,
+          "cName": "图标",
+          "type": "component",
+          "show": true,
+          "desc": ""
+        },
+        {
+          "name": "Cell",
+          "sort": 1,
+          "cName": "单元格",
+          "type": "component",
+          "show": true,
+          "desc": ""
+        },
+        {
+          "name": "Popup",
+          "sort": 1,
+          "cName": "弹出层",
+          "type": "component",
+          "show": true,
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "name": "布局组件",
+      "enName": "layout",
+      "packages": [
+        {
+          "name": "Divider",
+          "sort": 1,
+          "cName": "分割线",
+          "type": "component",
+          "show": true,
+          "desc": ""
+        },
+        {
+          "name": "Layout",
+          "sort": 1,
+          "cName": "布局",
+          "type": "component",
+          "show": true,
+          "desc": ""
+        },
+        {
+          "name": "Sticky",
+          "sort": 1,
+          "cName": "粘性布局",
+          "type": "component",
+          "show": true,
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "name": "导航组件",
+      "enName": "navigation",
+      "packages": [
+        {
+          "name": "Navbar",
+          "sort": 1,
+          "cName": "导航栏",
+          "type": "component",
+          "show": true,
+          "desc": ""
+        }
+      ]
+    }
+  ]
+}

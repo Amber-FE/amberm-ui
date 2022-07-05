@@ -8,11 +8,8 @@
     "dist"
   ],
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs",
     "register:components": "vitepress-rc",
-    "dev": "vite",
+    "dev": "cd packages/site && vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "rollup": "rollup -c ./script/rollup.config.js",
@@ -75,7 +72,7 @@
       "path": "./node_modules/cz-customizable"
     }
   },
-  "description": "## 技术栈 #### Vue3 + TypeScript + Vite",
+  "description": "",
   "directories": {
     "doc": "docs"
   },
