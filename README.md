@@ -4,7 +4,7 @@
 
 - [x] 组建打包
 
-- [ ] 文档
+- [x] 文档
 
 - [ ] UI单元测试
 
@@ -14,6 +14,15 @@
 
 ```bash
 npm install --save amberm-ui
+```
+
+# 开发者
+```bash
+npm install
+
+npm run dev
+
+npm run docs:dev
 ```
 
 # LICENSE

@@ -38,9 +38,6 @@ const plugins = [
   terser()
 ]
 
-// js 打包
-// css 打包
-
 const cssBuild = {
   input: 'packages/components/index.ts',
   plugins,
