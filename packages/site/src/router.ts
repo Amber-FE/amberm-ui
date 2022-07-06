@@ -27,7 +27,7 @@ const findComponentName = (name: string) => {
 }
 
 /** vite */
-const modulesPage = import.meta.glob('../../components/**/demo.md')
+const modulesPage = import.meta.glob('../../components/**/demo.vue')
 
 Object.keys(modulesPage).forEach((key) => {
   const name = (/components\/(.*)\/demo.vue/.exec(modulesPage[key]) as any[])[1]
