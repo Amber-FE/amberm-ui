@@ -1,6 +1,8 @@
 import type { CSSProperties } from 'vue'
 import { computed, defineComponent } from 'vue'
+
 import { useNameSpace } from '../../utils'
+
 import { buttonProps } from './types'
 
 const name = useNameSpace('button')
@@ -20,9 +22,8 @@ export default defineComponent({
     const renderText = () => {
       if (props.loadingText) {
         return <span>{props.loadingText}</span>
-      } else {
-        return <span>{slots.default ? slots.default() : ''}</span>
       }
+      return <span>{slots.default ? slots.default() : ''}</span>
     }
 
     const getStyle = () => {
@@ -56,4 +57,3 @@ export default defineComponent({
     }
   }
 })
-

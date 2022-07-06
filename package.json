@@ -10,7 +10,10 @@
   "scripts": {
     "register:components": "vitepress-rc",
     "dev": "cd packages/site && vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "cd packages/site && vue-tsc --noEmit && vite build",
+    "docs:dev": "vitepress dev document",
+    "docs:build": "vitepress build document",
+    "docs:serve": "vitepress serve document",
     "preview": "vite preview",
     "rollup": "rollup -c ./script/rollup.config.js",
     "lint:fix": "eslint packages --fix --ext .ts,.tsx",
