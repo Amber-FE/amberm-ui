@@ -2,7 +2,7 @@ export default {
   title: 'AmberMobile',
   description: 'AmberMobile is a mobile application for managing and tracking your tasks.',
   lang: 'zh-CN',
-  base: '/',
+  base: '/amberm-ui/',
   themeConfig: {
     // 展示搜索框
     algolia: {
