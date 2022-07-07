@@ -7,11 +7,11 @@ const route = useRoute()
 const noFramePath = ['start', 'intro']
 const isFrameShow = ref(false)
 
-// const url = ref('http://127.0.0.1:9909')
-// const baseURL =  ref('http://127.0.0.1:9909')
+const url = ref('http://127.0.0.1:9909')
+const baseURL =  ref('http://127.0.0.1:9909')
 
-const url = ref('https://amber-fe.github.io/amberm-ui/example/')
-const baseURL =  ref('https://amber-fe.github.io/amberm-ui/example/')
+// const url = ref('https://amber-fe.github.io/amberm-ui/example/')
+// const baseURL =  ref('https://amber-fe.github.io/amberm-ui/example/')
 
 watch(
   () => route.path,
