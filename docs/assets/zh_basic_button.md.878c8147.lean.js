@@ -1,0 +1,1 @@
+import{_ as a,c as n,o as s,a as t}from"./app.63fc1e90.js";const b='{"title":"Button \u6309\u94AE","description":"","frontmatter":{},"headers":[],"relativePath":"zh/basic/button.md"}',p={},o=t("",18),e=[o];function c(u,l,k,i,d,r){return s(),n("div",null,e)}var m=a(p,[["render",c]]);export{b as __pageData,m as default};

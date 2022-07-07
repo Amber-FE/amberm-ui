@@ -1,52 +1,56 @@
-# Button 按钮
+# Button
 
-<h3 class="default">代码演示</h3>
+--- 
 
-#### 按钮类型
+### Install
+```
+import { createApp } from 'vue';
+import { Button } from 'amberm-ui';
 
-支持`default`、`primary`、`success`、`info`、`warning`、`danger`六种类型，默认为`default`
+const app = createApp();
+app.use(Button);
+```
+
+
+#### Type
+
 ```vue
 <template>
-  <amber-button type="default">默认按钮</amber-button>
-  <amber-button type="primary">主要按钮</amber-button>
-  <amber-button type="success">成功按钮</amber-button>
-  <amber-button type="info">信息按钮</amber-button>
-  <amber-button type="warning">警告按钮</amber-button>
-  <amber-button type="danger">危险按钮</amber-button>
+  <amber-button type="default">Default</amber-button>
+  <amber-button type="primary">Primary</amber-button>
+  <amber-button type="success">Success</amber-button>
+  <amber-button type="info">Info</amber-button>
+  <amber-button type="warning">Warning</amber-button>
+  <amber-button type="danger">Danger</amber-button>
 </template>
 ```
 
-#### 禁用状态
+#### Disabled
 
-通过`disabled`属性来禁用按钮，此时按钮不可点击
 ```vue
 <template>
-  <amber-button type="default" disabled>默认按钮</amber-button>
-  <amber-button type="primary" disabled>主要按钮</amber-button>
-  <amber-button type="success" disabled>成功按钮</amber-button>
-  <amber-button type="info" disabled>信息按钮</amber-button>
-  <amber-button type="warning" disabled>警告按钮</amber-button>
-  <amber-button type="danger" disabled>危险按钮</amber-button>
+  <amber-button type="default" disabled>disabled</amber-button>
+  <amber-button type="success" disabled>disabled</amber-button>
+  <amber-button type="info" disabled>disabled</amber-button>
 </template>
 ```
 
-#### 按钮形状
+#### Shape
 ```vue
 <template>
-  <amber-button type="primary">主要按钮</amber-button>
-  <amber-button round type="success">成功按钮</amber-button>
+  <amber-button type="primary">Defalut</amber-button>
+  <amber-button round type="success">Round</amber-button>
 </template>
 ```
 
-#### 按钮尺寸
+#### Size
 
-支持`large`、`normal`、`small`、`mini`四种尺寸，默认为`normal`
 ```vue
 <template>
-  <amber-button size="large">大号按钮</amber-button>
-  <amber-button size="normal">普通按钮</amber-button>
-  <amber-button size="small">小型按钮</amber-button>
-  <amber-button size="mimi">迷你按钮</amber-button>
+  <amber-button size="large">Large</amber-button>
+  <amber-button size="normal">Normal</amber-button>
+  <amber-button size="small">Small</amber-button>
+  <amber-button size="mini">Mini</amber-button>
 </template>
 ```
 
@@ -54,18 +58,19 @@
 
 #### Props
 
-| 参数 | 说明 | 类型 | 可选值 | 默认值 |
-| --- | ---  | --- |  ---    | --- |
-| type | 类型 | String | `default`、`primary`、`success`、`info`、`warning`、`danger` | `default` |
-| disabled | 禁用 | Boolean | - | `false` |
-| round | 圆形按钮 | Boolean | - | `false` |
-| size | 大小 | String | `large`、`normal`、`small`、`mini` | `normal` |
-| loading | 加载 | Boolean | - | `false` |
-| loadingText | 加载文案 | String | 与`loading`一起使用 |  |
+| Attribute | Description | Type  | Default |
+| --- | ---  | --- |   --- |
+| type | Can be set to `default`、`primary`、`success`、`info`、`warning`、`danger` | String  | `default` |
+| disabled | - | Boolean | `false` |
+| round | - | Boolean | - | `false` |
+| size | Can be set to `large`、`normal`、`small`、`mini`   | String | `normal` |
+| loading | - | Boolean  | `false` |
+| loadingText |  | String | "" | |
 
 
 #### Event
 
-| 事件名 | 说明 | 回调参数 |
+
+| Event | Description | 	Arguments |
 | --- | ---  | --- |
-| click | 点击按钮触发 | event: Event |
+| click | Emitted when button is clicked and not disabled or loading | event: Event |

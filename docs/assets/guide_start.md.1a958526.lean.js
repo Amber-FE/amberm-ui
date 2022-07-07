@@ -1,0 +1,1 @@
+import{_ as n,c as a,o as s,a as t}from"./app.63fc1e90.js";const m='{"title":"Quick Start","description":"","frontmatter":{},"headers":[],"relativePath":"guide/start.md"}',p={},c=t("",7),o=[c];function e(l,u,k,i,r,d){return s(),a("div",null,o)}var h=n(p,[["render",e]]);export{m as __pageData,h as default};
