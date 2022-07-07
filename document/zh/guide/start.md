@@ -1,22 +1,21 @@
-# Quick Start
+# 快速开始
 
----
+#### CDN 安装使用示例
 
-
-#### CDN 
-
-
+::: tip
+可以通过 CDN 的方式引入， 可以在 jsdelivr 和 unpkg 等公共 CDN 上获取到 AmberUI
+:::
 ```html
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- style -->
+    <!-- 引入样式 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/amber-ui@0.3.0/dist/css/index.css" />
-    <!-- vue -->
+    <!-- 引入Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <!-- AmberUI Library -->
+    <!-- 引入AmberUI组件库 -->
     <script src="https://cdn.jsdelivr.net/npm/amber-ui@0.3.0/dist/index.umd.min.js"></script>
     
   </head>
@@ -37,7 +36,7 @@
 ```
 
 
-#### vue-cli / webpack
+#### 使用 vue-cli / webpack
 
 ```shell
   npm i amber-ui -S

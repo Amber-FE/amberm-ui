@@ -7,26 +7,26 @@ const route = useRoute()
 const noFramePath = ['start', 'intro']
 const isFrameShow = ref(false)
 
-// const url =  process.env.RUN_ENV == 'test' ?
-// ref('http://127.0.0.1:9909') :
-// ref('https://amber-fe.github.io/amberm-ui/example/')
+// const url = ref('http://127.0.0.1:9909')
+// const baseURL =  ref('http://127.0.0.1:9909')
+
 const url = ref('https://amber-fe.github.io/amberm-ui/example/')
 const baseURL =  ref('https://amber-fe.github.io/amberm-ui/example/')
-// const url = ref('http://127.0.0.1:9909')
 
 watch(
   () => route.path,
   (newPath) => {
     let path = newPath.split('/')[newPath.split('/').length - 1].split('.')[0]
-
-    console.log(path)
-
+    let lang = newPath.split('/')[newPath.split('/').length - 3] 
     if (noFramePath.includes(path)) {
       isFrameShow.value = false
     } else {
       isFrameShow.value = true
     }
-    url.value = baseURL.value + '/#/' + path
+    if(!lang) {
+      lang = 'en'
+    }
+    url.value = baseURL.value + '/#/' + path + '?lang=' + lang
   },
   { immediate: true, deep: true }
 )

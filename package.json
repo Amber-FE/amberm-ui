@@ -9,8 +9,8 @@
   ],
   "scripts": {
     "register:components": "vitepress-rc",
-    "dev": "cd packages/site && vite",
-    "build": "cd packages/site && vue-tsc --noEmit && vite build",
+    "dev": "cd example && vite",
+    "build": "cd example && vue-tsc --noEmit && vite build",
     "docs:dev": "cross-env RUN_ENV=test vitepress dev document",
     "docs:build": "cross-env RUN_ENV=prod vitepress build document",
     "docs:serve": "vitepress serve document",
@@ -33,6 +33,7 @@
     "vite-plugin-dts": "^0.9.9",
     "vitepress": "^0.22.4",
     "vue": "^3.2.25",
+    "vue-i18n": "^9.1.10",
     "vue-router": "^4.0.15"
   },
   "devDependencies": {
