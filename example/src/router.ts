@@ -1,7 +1,7 @@
 import type { RouteRecordRaw } from 'vue-router'
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-import Button from '../../packages/components/button/demo.vue'
+import Button from '../../packages/amberm-ui/components/button/demo.vue'
 
 import Index from './components/index.vue'
 
