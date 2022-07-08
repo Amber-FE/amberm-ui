@@ -14,7 +14,6 @@
     "docs:dev": "cross-env RUN_ENV=test vitepress dev document",
     "docs:build": "cross-env RUN_ENV=prod vitepress build document",
     "docs:serve": "vitepress serve document",
-    "preview": "vite preview",
     "rollup": "rollup -c ./script/rollup.config.js",
     "lint:fix": "eslint packages --fix --ext .ts,.tsx",
     "prepare": "husky install"

@@ -11,7 +11,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import { terser } from 'rollup-plugin-terser'
 import commonjs from 'rollup-plugin-commonjs'
 
-const baseFolder = './packages/'
+const baseFolder = './packages/amberm-ui'
 const componentsFolder = 'components/'
 
 const components = fs
@@ -38,16 +38,6 @@ const plugins = [
   terser()
 ]
 
-const cssBuild = {
-  input: 'packages/components/index.ts',
-  plugins,
-  output: {
-    dir: 'dist',
-    name: 'amberm-ui',
-    format: 'es'
-  }
-}
-
 /** @type {import('rollup').RollupOptions} */
 const esMinConfig = {
   input: entriespath,
@@ -64,4 +54,4 @@ const esMinConfig = {
   ]
 }
 
-export default [esMinConfig, cssBuild]
+export default [esMinConfig]
