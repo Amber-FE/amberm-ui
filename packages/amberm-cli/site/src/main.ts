@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 
-import { Button } from '../../packages/amberm-ui/components'
+import { Button } from '../../../amberm-ui/components'
 
 import VueI18n from './language'
 import App from './App.vue'
