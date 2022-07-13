@@ -1,5 +1,7 @@
 <template>
-  <div class="Main">文档</div>
+  <div class="Main">
+    <router-view />
+  </div>
 </template>
 <script setup></script>
 <style lang="scss" scoped>

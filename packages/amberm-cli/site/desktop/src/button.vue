@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <router-link to="/start">开始</router-link>
+  <div>button 组件 解析markdown 测试</div>
 </template>
 <style lang="scss" scoped>
   .container {

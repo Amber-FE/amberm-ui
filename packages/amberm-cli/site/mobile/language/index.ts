@@ -4,12 +4,12 @@ import zhCN from './lang/zh_CN'
 import enUS from './lang/en'
 
 const i18n = createI18n({
-  locale: 'en', // 默认显示语音
+  locale: 'en_US', // 默认显示语音
 
   messages: {
-    zh: zhCN, // 中文
+    zh_CN: zhCN, // 中文
 
-    en: enUS // 英文——美式
+    en_US: enUS // 英文——美式
   }
 })
 
