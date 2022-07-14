@@ -1,12 +1,13 @@
 #!/usr/bin/env node
+/* eslint-disable import/extensions */
 
 import { readFile } from 'fs/promises'
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Command } from 'commander'
 
-// eslint-disable-next-line import/extensions
 import { dev } from '../src/commands/dev.js'
+import { build } from '../src/commands/build.js'
 
 const { version } = JSON.parse(await readFile(new URL('../package.json', import.meta.url)))
 
@@ -19,6 +20,13 @@ program
   .description('Run dev server')
   .action(async () => {
     dev()
+  })
+
+program
+  .command('build')
+  .description('Run build')
+  .action(async () => {
+    build()
   })
 
 program.parse()

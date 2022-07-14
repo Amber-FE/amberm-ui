@@ -5,12 +5,7 @@ import DocMain from './components/DocMain.vue'
 import DocMobile from './components/DocMobile.vue'
 </script>
 <template>
-  <doc-header />
-  <div class="container">
-    <doc-aside />
-    <doc-main />
-    <doc-mobile />
-  </div>
+  <router-link to="/start">开始</router-link>
 </template>
 <style lang="scss" scoped>
 .container {
