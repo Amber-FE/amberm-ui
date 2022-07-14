@@ -1,1 +1,0 @@
-import{_ as a,c as n,o as t,a as s}from"./app.63fc1e90.js";const b='{"title":"Button","description":"","frontmatter":{},"headers":[{"level":3,"title":"Install","slug":"install"}],"relativePath":"basic/button.md"}',p={},e=s("",17),o=[e];function c(l,u,k,i,r,d){return t(),n("div",null,o)}var m=a(p,[["render",c]]);export{b as __pageData,m as default};

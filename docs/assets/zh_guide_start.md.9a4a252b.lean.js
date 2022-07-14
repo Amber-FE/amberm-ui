@@ -1,1 +1,0 @@
-import{_ as n,c as s,o as a,a as t}from"./app.63fc1e90.js";const m='{"title":"\u5FEB\u901F\u5F00\u59CB","description":"","frontmatter":{},"headers":[],"relativePath":"zh/guide/start.md"}',p={},c=t("",7),o=[c];function e(l,u,k,i,r,d){return a(),s("div",null,o)}var h=n(p,[["render",e]]);export{m as __pageData,h as default};

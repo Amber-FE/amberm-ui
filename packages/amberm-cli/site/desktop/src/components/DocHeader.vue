@@ -31,12 +31,12 @@
 <style lang="scss" scoped>
   .header {
     display: flex;
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 86px;
     background-color: white;
     border-bottom: 2px solid #eeeeee;
-
+    z-index: 100;
     &-logo {
       width: 150px;
       height: 100%;
