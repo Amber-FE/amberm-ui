@@ -3,7 +3,7 @@
 --- 
 
 ### Install
-```
+``` js
 import { createApp } from 'vue';
 import { Button } from 'amberm-ui';
 
@@ -12,9 +12,9 @@ app.use(Button);
 ```
 
 
-#### Type
+### Type
 
-```vue
+``` js
 <template>
   <amber-button type="default">Default</amber-button>
   <amber-button type="primary">Primary</amber-button>
@@ -25,9 +25,9 @@ app.use(Button);
 </template>
 ```
 
-#### Disabled
+### Disabled
 
-```vue
+``` js
 <template>
   <amber-button type="default" disabled>disabled</amber-button>
   <amber-button type="success" disabled>disabled</amber-button>
@@ -35,17 +35,17 @@ app.use(Button);
 </template>
 ```
 
-#### Shape
-```vue
+### Shape
+```js
 <template>
   <amber-button type="primary">Defalut</amber-button>
   <amber-button round type="success">Round</amber-button>
 </template>
 ```
 
-#### Size
+### Size
 
-```vue
+```js
 <template>
   <amber-button size="large">Large</amber-button>
   <amber-button size="normal">Normal</amber-button>
@@ -54,21 +54,20 @@ app.use(Button);
 </template>
 ```
 
-<h3 class="default">API</h3>
 
-#### Props
+### Props
 
 | Attribute | Description | Type  | Default |
 | --- | ---  | --- |   --- |
-| type | Can be set to `default`、`primary`、`success`、`info`、`warning`、`danger` | String  | `default` |
-| disabled | - | Boolean | `false` |
-| round | - | Boolean | - | `false` |
-| size | Can be set to `large`、`normal`、`small`、`mini`   | String | `normal` |
-| loading | - | Boolean  | `false` |
-| loadingText |  | String | "" | |
+| type | Can be set to `default`、`primary`、`success`、`info`、`warning`、`danger` | string  | `default` |
+| disabled | - | boolean | `false` |
+| round | - | boolean | - | `false` |
+| size | Can be set to `large`、`normal`、`small`、`mini`   | string | `normal` |
+| loading | - | boolean  | `false` |
+| loadingText |  | string | "" | |
 
 
-#### Event
+### Event
 
 
 | Event | Description | 	Arguments |

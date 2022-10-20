@@ -3,7 +3,7 @@ import { App as Application, Plugin } from "vue";
 import * as components from "./components/index";
 import { setVueInstance } from "./utils";
 
-const install: Exclude<Plugin["install"], undefined> = (
+const installs: Exclude<Plugin["install"], undefined> = (
   instance: Application
 ) => {
   setVueInstance(instance);
@@ -12,6 +12,10 @@ const install: Exclude<Plugin["install"], undefined> = (
   }
 };
 
-export default install;
+export   default {
+version:'1.01',
+};
+export const install=installs
+
 
 export * from "./components";

@@ -1,67 +1,72 @@
 <template>
-  <div class="Aside">
-    <ul class="aside-items">
-      <li class="items-header">指南</li>
-      <li class="items">入门</li>
-      <li class="items">快速开始</li>
-      <li class="items">更换主题</li>
-    </ul>
-    <ul class="aside-items">
-      <li class="items-header">基础组件</li>
-      <li class="items active">Button 按钮</li>
-      <li class="items">Color 颜色</li>
-      <li class="items">Tips 提示</li>
-      <li class="items">Tree 树形控件</li>
-      <li class="items">Steps 步骤条</li>
-      <li class="items">Divider 分割线</li>
-    </ul>
-    <ul class="aside-items">
-      <li class="items-header">基础组件</li>
-      <li class="items">Button 按钮</li>
-      <li class="items">Color 颜色</li>
-      <li class="items">Tips 提示</li>
-      <li class="items">Tree 树形控件</li>
-      <li class="items">Steps 步骤条</li>
-      <li class="items">Divider 分割线</li>
-    </ul>
-    <ul class="aside-items">
-      <li class="items-header">基础组件</li>
-      <li class="items">Button 按钮</li>
-      <li class="items">Color 颜色</li>
-      <li class="items">Tips 提示</li>
-      <li class="items">Tree 树形控件</li>
-      <li class="items">Steps 步骤条</li>
-      <li class="items">Divider 分割线</li>
-    </ul>
-    <ul class="aside-items">
-      <li class="items-header">基础组件</li>
-      <li class="items">Button 按钮</li>
-      <li class="items">Color 颜色</li>
-      <li class="items">Tips 提示</li>
-      <li class="items">Tree 树形控件</li>
-      <li class="items">Steps 步骤条</li>
-      <li class="items">Divider 分割线</li>
-    </ul>
-    <ul class="aside-items">
-      <li class="items-header">基础组件</li>
-      <li class="items">Button 按钮</li>
-      <li class="items">Color 颜色</li>
-      <li class="items">Tips 提示</li>
-      <li class="items">Tree 树形控件</li>
-      <li class="items">Steps 步骤条</li>
-      <li class="items">Divider 分割线</li>
+  <div class="Aside" :style="style">
+    <ul v-for="(items, index) in site.locales['zh-CN'].nav" :key="index" class="aside-items">
+      <li class="items-header">
+        {{ items.title }}
+      </li>
+
+      <li v-for="item in items.items" :key="item" class="items" @click="$router.push(item.path)">
+        {{ item.title }}
+      </li>
     </ul>
   </div>
 </template>
-<script setup></script>
+<script setup>
+  import { computed, ref } from 'vue'
+  import { config } from 'site-desktop-shared'
+
+  const top = ref(88)
+  const bottom = ref(0)
+  function onScroll() {
+    const { pageYOffset: offset } = window
+    top.value = Math.max(0, 88 - offset)
+  }
+  const style = computed(() => ({
+    top: `${top.value}px`,
+    bottom: `${bottom.value}px`
+  }))
+  window.addEventListener('scroll', onScroll)
+  onScroll()
+  const site = computed(() => {
+    return config.site
+  })
+</script>
 <style lang="scss" scoped>
   .Aside {
-    position: relative;
-    width: 12%;
-    height: 90%;
-    background-color: #FAFAFA;
-    border-right: 2px solid #eeeeee;
-    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    z-index: 1;
+    min-width: 220px;
+    max-width: 220px;
+    padding: 24px 0;
+    overflow-y: scroll;
+    background-color: #fff;
+    box-shadow: 0 8px 12px #ebedf0;
+    top: 88px;
+    bottom: 0px;
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+      border-radius: 6px;
+    }
+    &:hover::-webkit-scrollbar-thumb {
+      background-color: rgba(69, 90, 100, 0.2);
+    }
+    @media (max-width: 1300px) {
+      .items {
+        a {
+          font-size: 13px;
+        }
+
+        &:active {
+          font-size: 14px;
+        }
+      }
+    }
     .aside-items {
       list-style: none;
       margin-top: 8px;
@@ -69,7 +74,7 @@
         font-size: 0.9em;
         font-weight: bold;
         color: #b1b1b1;
-        padding-left:.8em ;
+        padding-left: 0.8em;
       }
       .items {
         font-size: 0.95em;
@@ -79,13 +84,13 @@
         text-align: left;
       }
       .items:hover {
-        color: #1A9Dff;
+        color: #1a9dff;
       }
       .active {
-        background: #E3F1FF;
-        border-left: 4px solid #1A9Dff;
+        background: #e3f1ff;
+        border-left: 4px solid #1a9dff;
         box-sizing: border-box;
-        color: #1A9Dff;
+        color: #1a9dff;
       }
     }
   }
