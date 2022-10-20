@@ -33,7 +33,7 @@
           "cName": "图标",
           "type": "component",
           "show": true,
-          "desc": "用于显示特殊的图案"
+          "desc": ""
         },
         {
           "name": "Cell",
@@ -94,24 +94,7 @@
           "type": "component",
           "show": true,
           "desc": ""
-        },
-        {
-          "name": "menu",
-          "sort": 2,
-          "cName": "菜单",
-          "type": "component",
-          "show": true,
-          "desc": ""
-        },
-        {
-          "name": "tab",
-          "sort": 3,
-          "cName": "标签页",
-          "type": "component",
-          "show": true,
-          "desc": ""
         }
-        
       ]
     }
   ]

@@ -12,10 +12,10 @@
         <ul>
           <template v-for="_package in _nav.packages">
             <li v-if="_package.show" :key="_package">
-              <router-link :to="_package.name.toLowerCase()">
-                {{ _package.name }}&nbsp;&nbsp;{{ _package.cName }}
+              <router-link :to="_package.name.toLowerCase()"
+                >{{ _package.name }}&nbsp;&nbsp;{{ _package.cName }}
               </router-link>
-              <amber-icon size="14px" color="#979797" name="right" />
+              <amber-icon size="14px" color="#979797" name="right"></amber-icon>
             </li>
           </template>
         </ul>
@@ -26,11 +26,10 @@
 
 <script lang="ts">
   import { defineComponent, reactive } from 'vue'
-
   import { nav } from '../config.json'
 
   export default defineComponent({
-    name: 'DocsPage',
+    name: 'docsPage',
     setup() {
       console.log(nav)
       const methods = {

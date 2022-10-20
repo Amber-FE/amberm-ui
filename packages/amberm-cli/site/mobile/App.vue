@@ -1,10 +1,10 @@
 <template>
   <div v-if="isShow" id="nav">
     <!-- <div class="back" @click="goBack">返回</div> -->
-    <am-icon name="left" class="back" @click="goBack" />
+    <am-icon name="left" class="back" @click="goBack"></am-icon>
     {{ title }}
   </div>
-  <div v-if="isShow" class="nav-black" />
+  <div v-if="isShow" class="nav-black"></div>
   <div class="mobile-content">
     <router-view />
   </div>
@@ -14,7 +14,7 @@
   import { useRoute, useRouter } from 'vue-router'
 
   export default defineComponent({
-    name: 'App',
+    name: 'app',
     setup() {
       const { ctx } = getCurrentInstance()
       const title = ref('AmberMobile')
@@ -43,8 +43,8 @@
         // console.log(window, '00s00s', route)
         window.addEventListener(
           'message',
-          (e) => {
-            console.log(e, 'ssjjsjsj')
+          () => {
+            // console.log(e, 'ssjjsjsj')
             // alert("iframe页面token失效了");
           },
           false

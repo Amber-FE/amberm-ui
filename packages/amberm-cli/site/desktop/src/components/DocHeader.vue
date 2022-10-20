@@ -1,16 +1,14 @@
 <template>
   <div class="header">
     <div class="header-logo">
-      <img src="../assets/img/logo.png " />
+      <img src="../assets/img/logo.png" />
     </div>
     <div class="header-right">
       <div class="header-right-nav">
         <span> {{ $t('header_nav.design') }}</span>
         <span> {{ $t('header_nav.components') }}</span>
       </div>
-      <div class="header-right-i18" @click="setLang(zhCN)">
-        {{ $t('header.language') }}
-      </div>
+      <div class="header-right-i18" @click="setLang(zhCN)">{{ $t('header.language') }}</div>
     </div>
   </div>
 </template>
@@ -32,8 +30,8 @@
 </script>
 <style lang="scss" scoped>
   .header {
-    position: relative;
     display: flex;
+    position: fixed;
     width: 100%;
     height: 86px;
     background-color: white;

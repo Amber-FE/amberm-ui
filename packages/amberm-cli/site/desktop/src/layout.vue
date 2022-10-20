@@ -14,7 +14,7 @@
 </template>
 <style lang="scss" scoped>
   .container {
-    // display: flex;
+    display: flex;
     width: 100%;
     height: 100%;
   }
