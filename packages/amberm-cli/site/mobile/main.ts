@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 
-import Amberm from '../../../amberm-ui'
+// eslint-disable-next-line import/no-relative-packages
+import { install as Amberm } from '../../../amberm-ui'
 
 import VueI18n from './language'
 import App from './App.vue'

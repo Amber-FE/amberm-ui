@@ -4,7 +4,6 @@ import { createServer } from 'vite'
 import figlet from 'figlet'
 import Printer from '@darkobits/lolcatjs'
 
-// eslint-disable-next-line import/extensions
 import { getViteConfigDev } from '../config/vite.site.js'
 
 const { name, version } = JSON.parse(await readFile(new URL('../../package.json', import.meta.url)))
@@ -18,3 +17,6 @@ export async function compileSite() {
   await server.listen()
   server.printUrls()
 }
+// import path from 'path'
+
+// import uslug from 'uslug'

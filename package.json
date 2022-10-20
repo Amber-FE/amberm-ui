@@ -7,11 +7,21 @@
   "files": [
     "dist"
   ],
+  "nano-staged": {
+    "*.md": "prettier --write",
+    "*.{ts,tsx,js,vue,less}": "prettier --write",
+    "*.{ts,tsx,js,vue}": "eslint --fix"
+  },
   "scripts": {
+    "dev":"cd ./packages/amberm-ui && npm run dev",
     "build": "cd example && vue-tsc --noEmit && vite build",
+    "buildC": "amberm-cli buildC",
     "rollup": "rollup -c ./script/rollup.config.js",
     "lint:fix": "eslint packages --fix --ext .ts,.tsx",
     "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts}": "eslint --fix"
   },
   "dependencies": {
     "@darkobits/lolcatjs": "^3.1.5",
@@ -19,6 +29,10 @@
     "@types/node": "^17.0.21",
     "@vitejs/plugin-vue-jsx": "^1.3.10",
     "cross-env": "^7.0.3",
+    "i": "^0.3.7",
+    "markdown-it-toc-done-right": "^4.2.0",
+    "npm": "^8.15.1",
+    "ora": "^6.1.2",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-esbuild": "^4.9.1",
     "rollup-plugin-postcss": "^4.0.2",

@@ -24,7 +24,8 @@ npm install
 
 npm run dev
 
-npm run docs:dev
+# 组件库打包
+npm run buildC
 ```
 
 # LICENSE

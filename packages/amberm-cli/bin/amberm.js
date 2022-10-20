@@ -8,6 +8,7 @@ import { Command } from 'commander'
 
 import { dev } from '../src/commands/dev.js'
 import { build } from '../src/commands/build.js'
+import { buildC } from '../src/commands/buildComponent.js'
 
 const { version } = JSON.parse(await readFile(new URL('../package.json', import.meta.url)))
 
@@ -27,6 +28,13 @@ program
   .description('Run build')
   .action(async () => {
     build()
+  })
+
+program
+  .command('buildC')
+  .description('Run build')
+  .action(async () => {
+    buildC()
   })
 
 program.parse()

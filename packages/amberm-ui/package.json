@@ -1,0 +1,16 @@
+{
+  "name": "amberm-ui",
+  "version": "1.0.0",
+  "description": "移动端 Vue3 组件库",
+  "main": "index.ts",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buildC": "amberm-cli buildC",
+    "dev":"amberm-cli dev"
+  },
+  "author": "liuqi",
+  "license": "ISC"
+}

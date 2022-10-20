@@ -10,7 +10,7 @@ const hasViewBox = /(viewBox="[^>+].*?")/g
 const clearReturn = /(\r)|()/g
 const clearFill = /(fill="[^>+].*?")/g
 
-function findSvgFile(dir: string, prefix: string = 'amberm'): string[] {
+function findSvgFile(dir: string, prefix = 'amberm'): string[] {
   const svgRes: string[] = [] // 一个目录下所有的svg文件资源
 
   // 指定目录下所有文件名称的数组对象
@@ -56,7 +56,7 @@ function findSvgFile(dir: string, prefix: string = 'amberm'): string[] {
   return svgRes
 }
 
-const svgBuilder = (path: string, prefix: string = 'amberm') => {
+const svgBuilder = (path: string, prefix = 'amberm') => {
   if (path === '') {
     return
   }
