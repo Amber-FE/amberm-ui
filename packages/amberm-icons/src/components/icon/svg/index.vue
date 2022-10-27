@@ -35,5 +35,6 @@ export default defineComponent({
   height: 1em;
   fill: currentColor;
   overflow: hidden;
+  margin-right: 5px;
 }
 </style>

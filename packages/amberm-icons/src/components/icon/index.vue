@@ -1,12 +1,18 @@
 <template>
-  <svg-icon :name="name" :size="size" :color="color"></svg-icon>
+  <template v-if="!isImageIcon">
+    <svg-icon :name="name" :size="size" :color="color"></svg-icon>
+  </template>
+  <template v-if="isImageIcon">
+      <img :style={width:size,height:size} :src="name"  />
+  </template>
 </template>
 <script lang="ts">
 import { computed, CSSProperties, defineComponent } from 'vue'
 import SvgIcon from './svg/index.vue'
+const isImage = (name?: string) =>name?.includes('/');
 
 export default defineComponent({
-  name: 'Icon',
+  name: 'am-icon',
   components: { SvgIcon },
   props: {
     name: {
@@ -20,10 +26,16 @@ export default defineComponent({
     color: {
       type: String,
       default: '#000000'
+    },
+    backgroundColor: {
+      type:String,
+      default:'#fff'
     }
   },
   setup(props) {
     const iconSize = `${props.size.replace('px', '')}px`
+    const isImageIcon = isImage(props.name)
+    console.log(isImageIcon);
 
     const iconStyle = computed(() => {
       const style: CSSProperties = {}
@@ -33,7 +45,8 @@ export default defineComponent({
     })
 
     return {
-      iconStyle
+      iconStyle,
+      isImageIcon
     }
   }
 })
