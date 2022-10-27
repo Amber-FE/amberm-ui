@@ -1,0 +1,19 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/variables.scss';
+.am-cell-group{
+    background: $cell-group-background;
+
+    &-insert{
+        border-radius: var(--border-radius-lg);
+        margin: $cell-group-inset-margin ;
+        overflow: hidden;
+
+    }
+    &-title{
+        padding: var(--padding-md) var(--padding-md) var(--padding-xs);
+        color: var(--color-text);
+        &-insert{
+            padding: $cell-group-inset-margin ;
+        }
+    }
+}

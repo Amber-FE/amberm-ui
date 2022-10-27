@@ -1,14 +1,17 @@
+/* eslint-disable import/no-relative-packages */
 import type { CSSProperties } from 'vue'
 import { computed, defineComponent } from 'vue'
 
 import { useNameSpace } from '../../utils'
 
 import { buttonProps } from './types'
+import '../../../amberm-icons/dist/style.css'
 
 const name = useNameSpace('button')
 
 export default defineComponent({
   name,
+
   props: buttonProps,
   setup(props, { slots }) {
     const classes = computed(() => ({
@@ -21,7 +24,7 @@ export default defineComponent({
 
     const renderText = () => {
       if (props.loadingText) {
-        return <span>{props.loadingText}</span>
+        return <span class="am-button-loading-text">{props.loadingText}</span>
       }
       return <span>{slots.default ? slots.default() : ''}</span>
     }
@@ -50,7 +53,11 @@ export default defineComponent({
       const { loading } = props
       return (
         <button class={classes.value} {...getAttrs()} style={getStyle()}>
-          {loading && <amber-icon name="loading" />}
+          {loading && (
+            <span class="am-button-loading">
+              <span class="loading-spinner"></span>
+            </span>
+          )}
           {renderText()}
         </button>
       )

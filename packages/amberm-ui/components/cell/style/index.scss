@@ -1,0 +1,54 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins/hairline.scss';
+
+
+.am-cell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: $cell-color;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 10px  15px;
+    background-color: $cell-background-color;
+    &::after{
+        @include hairline-bottom($cell-border-color,var(--padding-md),var(--padding-md))
+    }
+    &:last-child::after{
+        display: none;
+    }
+    &-clickable{
+        cursor: pointer;
+    }
+    &-icon{
+
+    }
+    &-label{
+        margin-top: 4px;
+        height: 18px;
+        line-height: 18px;
+        font-size: 12px;
+        color: $cell-label-color;
+    }
+    &-left{
+        flex: 1;
+        text-align: left;
+    }
+    &-right{
+        flex: 1;
+        text-align: right;
+        color: $cell-right-color;
+    }
+    &-required {
+        overflow: visible;
+    
+        &::before {
+          position: absolute;
+          left: $cell-padding-xs;
+          color: $cell-required-color;
+          font-size: $cell-font-size;
+          content: '*';
+        }
+      }
+}

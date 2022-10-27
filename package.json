@@ -13,7 +13,7 @@
     "*.{ts,tsx,js,vue}": "eslint --fix"
   },
   "scripts": {
-    "dev":"cd ./packages/amberm-ui && npm run dev",
+    "dev": "cd ./packages/amberm-ui && npm run dev",
     "build": "cd example && vue-tsc --noEmit && vite build",
     "buildC": "amberm-cli buildC",
     "rollup": "rollup -c ./script/rollup.config.js",
@@ -39,6 +39,7 @@
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
+    "svgo-loader": "^3.0.1",
     "vite-plugin-dts": "^0.9.9",
     "vitepress": "^0.22.4"
   },

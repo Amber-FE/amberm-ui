@@ -59,7 +59,10 @@ function genExportDemos(items) {
 
 export const getSiteMobileShared = () => {
   const dirs = readdirSync(SRC_DIR)
-  dirs.pop()
+  dirs.filter((item) => {
+    return item !== 'index.ts'
+  })
+
   const documents = resolveDemos(dirs)
   const code = `${genImportDemo(documents)}
       ${genExportDemos(documents)}

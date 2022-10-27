@@ -28,8 +28,12 @@
   }
 
   &-primary {
-    background-color: $button-primary-background-color;
-    border: $button-border-width solid $button-primary-border-color
+    background: $button-primary-background-color;
+    border: $button-border-width solid $button-primary-border-color;
+    &:active{
+      transition: 500ms;
+      background: #0022AD;
+    }
   }
 
   &-success {
@@ -44,12 +48,18 @@
 
   &-warning {
     background-color: $button-warning-background-color;
-    border: $button-border-width solid $button-warning-border-color
+    border: $button-border-width solid $button-warning-border-color;
+    &:active{
+      background: #AD4E09;
+    }
   }
 
   &-danger {
     background-color: $button-danger-background-color;
-    border: $button-border-width solid $button-danger-border-color
+    border: $button-border-width solid $button-danger-border-color;
+    &:active{
+      background: #9B0000;
+    }
   }
 
   &-round {
@@ -59,6 +69,7 @@
   &-disabled {
     opacity: 0.5;
     cursor: not-allowed;
+    pointer-events: none;
     &::before {
       display: none;
     }
@@ -100,11 +111,50 @@
   &-mini:not(:last-child) {
     margin-right: 10px;
   }
+  
 
   &-loading {
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    &-text{
+      margin-left: 5px;
+    }
+    .loading-spinner{
+      &::after{
+        top: 2px;
+        right: 2px;
+        position: absolute;
+        content: " ";
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border: 2px solid #0022ad;
+        border-width: 2px;
+        border-radius: 10px;
+        border-left: none;
+        border-bottom: none;
+        animation: am-rotate .8s linear infinite;
+
+      }
+      &::before{
+        position: absolute;
+        content: " ";
+        top: 2px;
+        right: 2px;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border: 1px solid #fff;
+        border-width: 1px;
+        border-radius: 10px;
+        // animation: am-rotate .8s linear infinite;
+
+      }
+    }
 
     &--text {
       padding-left: 6px;
@@ -113,5 +163,14 @@
 
   &:active {
     opacity: 0.5;
+  }
+}
+@keyframes am-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }

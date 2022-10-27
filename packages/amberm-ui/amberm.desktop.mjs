@@ -43,11 +43,28 @@ export default {
             items: [
               {
                 path: 'button',
-                title: 'button 组件'
+                title: 'button 按钮'
               },
               {
                 path: 'icon',
-                title: 'icon 组件'
+                title: 'icon 图标'
+              },
+              {
+                path: 'cell',
+                title: 'cell 单元格'
+              }
+            ]
+          },
+          {
+            title: '导航组件',
+            items: [
+              {
+                path: 'navbar',
+                title: 'navbar 导航栏 '
+              },
+              {
+                path: 'tab',
+                title: 'tab 标签页'
               }
             ]
           }

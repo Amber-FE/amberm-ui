@@ -1,3 +1,11 @@
-import Button from './button'
+/* eslint-disable import/no-relative-packages */
 
-export { Button }
+import AmbermIcons from '../../amberm-icons/dist/amberm-icons.es.js'
+
+import Button from './button'
+import Navbar from './navbar'
+import Tab from './tab'
+import Cell from './cell'
+import CellGroup from './cell-group'
+
+export { Button, Navbar, AmbermIcons, Tab, Cell, CellGroup }

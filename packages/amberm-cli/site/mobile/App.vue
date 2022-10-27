@@ -89,7 +89,7 @@
   }
 
   #app {
-    background: #fff;
+    background: #f1f1f1;
     height: 100%;
     width: 100%;
     display: flex;
@@ -131,8 +131,8 @@
       }
     }
     .mobile-content {
+      // height: 100%;
       margin-top: 20px;
-      padding: 0 15px;
       background: #f7f8fa;
     }
     .nav-black {

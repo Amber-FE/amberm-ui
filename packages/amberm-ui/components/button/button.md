@@ -1,8 +1,9 @@
 # Button
 
---- 
+---
 
 ### Install
+
 ``` js
 import { createApp } from 'vue';
 import { Button } from 'amberm-ui';
@@ -10,7 +11,6 @@ import { Button } from 'amberm-ui';
 const app = createApp();
 app.use(Button);
 ```
-
 
 ### Type
 
@@ -36,6 +36,7 @@ app.use(Button);
 ```
 
 ### Shape
+
 ```js
 <template>
   <amber-button type="primary">Defalut</amber-button>
@@ -54,7 +55,6 @@ app.use(Button);
 </template>
 ```
 
-
 ### Props
 
 | Attribute | Description | Type  | Default |
@@ -66,10 +66,8 @@ app.use(Button);
 | loading | - | boolean  | `false` |
 | loadingText |  | string | "" | |
 
-
 ### Event
 
-
-| Event | Description | 	Arguments |
+| Event | Description |  Arguments |
 | --- | ---  | --- |
 | click | Emitted when button is clicked and not disabled or loading | event: Event |

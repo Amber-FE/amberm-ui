@@ -52,7 +52,7 @@ $button-mini-line-height: 22px !default;
 $button-default-border-color: var(--color-default) !default;
 $button-default-background-color: $white !default;
 $button-primary-border-color: var(--color-primary) !default;
-$button-primary-background-color: var(--color-primary) !default;
+$button-primary-background-color: var(--color-background-primary) !default;
 $button-info-border-color: var(--color-info) !default;
 $button-info-background-color: var(--color-info) !default;
 $button-success-border-color: var(--color-success) !default;
@@ -67,12 +67,21 @@ $cell-background-color: $white !default;
 $cell-background-color-active: #dfdfdf !default;
 $cell-color: $black !default;
 $cell-color-desc: $desc-color !default;
-$cell-border: 1px solid #edeef1 !default;
+$cell-border-color: #edeef1 !default;
 $cell-border-radius: $border-radius-size-2 !default;
 $cell-box-shadow: 0 1px 7px #edeef1 !default;
+$cell-label-color: var(--color-text) !default;
+$cell-right-color:#999999 !default;
+$cell-font-size: 16px !default;
+$cell-padding-xs:2px !default;
+$cell-required-color: var(--color-danger) !default;
 
 // cell-ground
 $cell-ground-border-bottom: 2px solid $border-color !default;
+
+//cell-group
+$cell-group-inset-margin: 5px var(--padding-md) !default;
+$cell-group-background: #fff !default;
 
 // divider
 $divider-color: var(--color-text) !default;

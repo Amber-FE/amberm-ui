@@ -32,7 +32,6 @@
   export default defineComponent({
     name: 'DocsPage',
     setup() {
-      console.log(nav)
       const methods = {
         sendToParent() {
           window.parent.postMessage(

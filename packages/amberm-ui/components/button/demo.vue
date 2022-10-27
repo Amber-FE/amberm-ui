@@ -68,6 +68,7 @@
       <am-button loading type="primary" :loading-text="$t('button.loading')">
 123
 </am-button>
+      <am-button loading type="primary" />
       <am-button loading type="success" :loading-text="$t('button.loading')" />
     </section>
     <h2>{{ $t('button.size') }}</h2>

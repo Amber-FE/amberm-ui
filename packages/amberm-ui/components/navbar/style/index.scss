@@ -1,0 +1,51 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/variables.scss';
+
+.am-navbar {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: $navbar-height;
+  line-height: $navbar-line-height;
+  color: $navbar-color;
+  font-size: 16px;
+  box-shadow: $navbar-shadow;
+  background-color: #fff;
+  &-fixed{
+    position: fixed;
+    top: 0px;
+  }
+  &-border{
+    border-bottom: $navbar-border-color 1px solid;
+  }
+  &-right {
+    
+    right: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding:  0 10px 0 0;
+    &-text{
+      color: var(--color-primary);
+    }
+  }
+  &-left {
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0  0 0 10px;
+    .left-text{
+      color: var(--color-primary);
+      margin-left: 5px;
+    }
+  }
+  &-title{
+    
+  }
+}

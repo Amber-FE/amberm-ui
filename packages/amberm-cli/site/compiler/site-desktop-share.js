@@ -94,9 +94,13 @@ const letExportConfig = () => {
 
 export const getSiteDesktopShared = () => {
   const dirs = readdirSync(SRC_DIR)
-  dirs.pop()
+  // console.log(dirs)
+  dirs.filter((item) => {
+    return item !== 'index.ts'
+  })
 
   const documents = resolveDocuments(dirs)
+  // console.log(documents, 0)
   const code = `${genImportDocuments(documents)}
   ${getConfigContent()}
     ${letExportConfig()}

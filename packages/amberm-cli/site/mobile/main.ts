@@ -1,3 +1,6 @@
+/* eslint-disable import/no-relative-packages */
+/* eslint-disable import/extensions */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { createApp } from 'vue'
 
 // eslint-disable-next-line import/no-relative-packages
