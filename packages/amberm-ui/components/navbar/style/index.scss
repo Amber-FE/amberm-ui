@@ -30,7 +30,7 @@
     cursor: pointer;
     padding:  0 10px 0 0;
     &-text{
-      color: var(--color-primary);
+      color: var(--am-color-primary);
     }
   }
   &-left {
@@ -41,7 +41,7 @@
     align-items: center;
     padding: 0  0 0 10px;
     .left-text{
-      color: var(--color-primary);
+      color: var(--am-color-primary);
       margin-left: 5px;
     }
   }

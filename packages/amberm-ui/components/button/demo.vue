@@ -65,9 +65,7 @@
     </section>
     <h2>{{ $t('button.loading') }}</h2>
     <section class="container-content">
-      <am-button loading type="primary" :loading-text="$t('button.loading')">
-123
-</am-button>
+      <am-button loading type="primary" :loading-text="$t('button.loading')"> 123 </am-button>
       <am-button loading type="primary" />
       <am-button loading type="success" :loading-text="$t('button.loading')" />
     </section>
@@ -117,6 +115,7 @@
       color: #5e6d82;
     }
     &-content {
+      padding: 0 10px;
       overflow: hidden;
       .am-button {
         margin-bottom: 10px;

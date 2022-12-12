@@ -1,4 +1,5 @@
 @import './var.scss';
+@import './common.scss';
 
 code {
   position: relative;
@@ -13,7 +14,7 @@ code {
   white-space: pre-wrap;
   word-wrap: break-word;
   -webkit-font-smoothing: auto;
-  background-color: #f8f8f8;
+  background-color: $themeColor;
   border-radius: $amberm-doc-border-radius;
 }
 

@@ -48,6 +48,8 @@
 </script>
 <style lang="scss" scoped>
   @import '../../../common/style/var.scss';
+  @import '../../../common/style/common.scss';
+
   .Mobile {
     display: flex;
     position: fixed;
@@ -64,7 +66,7 @@
     width: 360px;
     min-width: 360px;
     overflow: hidden;
-    background: #fafafa;
+    background: $themeColor1;
     border-radius: 20px;
     box-shadow: 0 8px 12px #ebedf0;
     @media (max-width: 1100px) {

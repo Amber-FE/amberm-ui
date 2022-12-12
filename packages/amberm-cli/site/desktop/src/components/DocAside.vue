@@ -32,6 +32,8 @@
   })
 </script>
 <style lang="scss" scoped>
+  @import '../../../common/style/common.scss';
+
   .Aside {
     position: fixed;
     left: 0;
@@ -40,7 +42,7 @@
     max-width: 220px;
     padding: 24px 0;
     overflow-y: scroll;
-    background-color: #fff;
+    background-color: $themeColor;
     box-shadow: 0 8px 12px #ebedf0;
     top: 88px;
     bottom: 0px;
@@ -73,18 +75,18 @@
       .items-header {
         font-size: 0.9em;
         font-weight: bold;
-        color: #b1b1b1;
+        color: $textColor;
         padding-left: 0.8em;
       }
       .items {
         font-size: 0.95em;
         padding: 0.35rem 0rem 0.35rem 1.25rem;
         cursor: pointer;
-        color: #555;
+        color: $textColor2;
         text-align: left;
       }
       .items:hover {
-        color: #1a9dff;
+        color: $hoverColor;
       }
       .active {
         background: #e3f1ff;

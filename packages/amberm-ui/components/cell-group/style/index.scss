@@ -4,14 +4,14 @@
     background: $cell-group-background;
 
     &-insert{
-        border-radius: var(--border-radius-lg);
+        border-radius: var(--am-border-radius-lg);
         margin: $cell-group-inset-margin ;
         overflow: hidden;
 
     }
     &-title{
-        padding: var(--padding-md) var(--padding-md) var(--padding-xs);
-        color: var(--color-text);
+        padding: var(--am-padding-md) var(--am-padding-md) var(--am-padding-xs);
+        color: var(--am-color-text);
         &-insert{
             padding: $cell-group-inset-margin ;
         }

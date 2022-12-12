@@ -51,6 +51,7 @@
   })
 </script>
 <style lang="scss" scoped>
+  @import '../../common/style/common.scss';
   .index {
     height: 100%;
     width: 100%;
@@ -74,19 +75,19 @@
           height: 48px;
           line-height: 48px;
           font-size: 34px;
-          color: rgba(51, 51, 51, 1);
+          color: $textColor;
         }
         p {
           height: 18px;
           line-height: 18px;
           font-size: 12px;
-          color: rgba(154, 155, 157, 1);
+          color: $textColor2;
         }
       }
     }
     &-components {
       box-sizing: border-box;
-      background: #f7f8fa;
+      background: $themeColor1;
       border-radius: 30px 30px 0 0;
       overflow: hidden;
       padding: 30px 25px;
@@ -95,7 +96,7 @@
         > li {
           line-height: 20px;
           font-size: 14px;
-          color: rgba(144, 156, 164, 1);
+          color: $textColor2;
           margin-bottom: 10px;
         }
         > ul {
@@ -105,7 +106,7 @@
             padding: 0 24px;
             height: 45px;
             line-height: 45px;
-            background: rgba(255, 255, 255, 1);
+            background: $themeColor;
             border-radius: 22px;
             box-shadow: 0px 1px 4px 0px rgba(102, 102, 102, 0.06);
             margin-bottom: 13px;
@@ -115,7 +116,7 @@
               font-size: 15px;
               font-weight: bold;
               display: block;
-              color: rgba(51, 51, 51, 1);
+              color: $textColor;
             }
           }
         }

@@ -1,5 +1,5 @@
-$primary-color: var(--color-primary) !default;
-$primary-color-end: var(--color-primary-end) !default;
+$primary-color: var(--am-color-primary) !default;
+$primary-color-end: var(--am-color-primary-end) !default;
 
 // ---- 基础色 ----
 $white: #fff !default;
@@ -49,18 +49,18 @@ $button-small-height: 28px !default;
 $button-small-line-height: 26px !default;
 $button-mini-height: 24px !default;
 $button-mini-line-height: 22px !default;
-$button-default-border-color: var(--color-default) !default;
+$button-default-border-color: var(--am-color-default) !default;
 $button-default-background-color: $white !default;
-$button-primary-border-color: var(--color-primary) !default;
-$button-primary-background-color: var(--color-background-primary) !default;
-$button-info-border-color: var(--color-info) !default;
-$button-info-background-color: var(--color-info) !default;
-$button-success-border-color: var(--color-success) !default;
-$button-success-background-color: var(--color-success) !default;
-$button-danger-border-color: var(--color-danger) !default;
-$button-danger-background-color: var(--color-danger) !default;
-$button-warning-border-color: var(--color-warning) !default;
-$button-warning-background-color: var(--color-warning) !default;
+$button-primary-border-color: var(--am-color-primary) !default;
+$button-primary-background-color: var(--am-color-background-primary) !default;
+$button-info-border-color: var(--am-color-info) !default;
+$button-info-background-color: var(--am-color-info) !default;
+$button-success-border-color: var(--am-color-success) !default;
+$button-success-background-color: var(--am-color-success) !default;
+$button-danger-border-color: var(--am-color-danger) !default;
+$button-danger-background-color: var(--am-color-danger) !default;
+$button-warning-border-color: var(--am-color-warning) !default;
+$button-warning-background-color: var(--am-color-warning) !default;
 
 // cell
 $cell-background-color: $white !default;
@@ -70,22 +70,22 @@ $cell-color-desc: $desc-color !default;
 $cell-border-color: #edeef1 !default;
 $cell-border-radius: $border-radius-size-2 !default;
 $cell-box-shadow: 0 1px 7px #edeef1 !default;
-$cell-label-color: var(--color-text) !default;
+$cell-label-color: var(--am-color-text) !default;
 $cell-right-color:#999999 !default;
 $cell-font-size: 16px !default;
 $cell-padding-xs:2px !default;
-$cell-required-color: var(--color-danger) !default;
+$cell-required-color: var(--am-color-danger) !default;
 
 // cell-ground
 $cell-ground-border-bottom: 2px solid $border-color !default;
 
 //cell-group
-$cell-group-inset-margin: 5px var(--padding-md) !default;
+$cell-group-inset-margin: 5px var(--am-padding-md) !default;
 $cell-group-background: #fff !default;
 
 // divider
-$divider-color: var(--color-text) !default;
-$divider-border-color: var(--color-border) !default;
+$divider-color: var(--am-color-text) !default;
+$divider-border-color: var(--am-color-border) !default;
 $divider-border: 2px solid $divider-border-color !default;
 $divider-border-width: 2px 0 0 !default;
 $divider-height: 2px !default;
@@ -97,4 +97,4 @@ $navbar-line-height: 44px !default;
 $navbar-color: $black !default;
 $navbar-font-weight: 500 !default;
 $navbar-border-color: $border-color;
-$navbar-shadow: 0 1px 7px var(--color-shadow);
+$navbar-shadow: 0 1px 7px var(--am-color-shadow);

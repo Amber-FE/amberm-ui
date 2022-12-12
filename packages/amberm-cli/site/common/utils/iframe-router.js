@@ -4,6 +4,7 @@
  */
 
 import { config } from 'site-desktop-shared'
+import { ref } from 'vue'
 
 let queue = []
 let isIframeReady = false
@@ -75,4 +76,33 @@ export function listenToSyncPath(router) {
       router.replace(path).catch(() => {})
     }
   })
+}
+export function syncThemeToChild(theme) {
+  const iframe = document.querySelector('iframe')
+  if (iframe) {
+    iframeReady(() => {
+      iframe.contentWindow.postMessage(
+        {
+          type: 'updateTheme',
+          value: theme
+        },
+        '*'
+      )
+    })
+  }
+}
+export function useCurrentTheme() {
+  const activeIndex = ref(+localStorage.getItem('themeIndex'))
+
+  window.addEventListener('message', (event) => {
+    if (event.data?.type !== 'updateTheme') {
+      return
+    }
+    console.log(event.data.value)
+
+    const newTheme = event.data?.value || '0'
+    activeIndex.value = newTheme
+  })
+
+  return activeIndex
 }

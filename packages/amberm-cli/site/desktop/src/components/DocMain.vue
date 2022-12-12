@@ -44,6 +44,7 @@
 </script>
 <style lang="scss">
   @import '../../../common/style/var.scss';
+  @import '../../../common/style/common.scss';
 
   .Main {
     position: relative;
@@ -71,7 +72,7 @@
         .amberm-doc-content {
           margin-bottom: 24px;
           padding: 24px;
-          background-color: #fff;
+          background-color: $themeColor2;
           border-radius: $amberm-doc-border-radius;
           box-shadow: 0 8px 12px #ebedf0;
 
@@ -145,7 +146,7 @@
           & > h4,
           & > h5,
           & > h6 {
-            color: var(amberm-doc-black);
+            color: $textColor;
             font-weight: normal;
             line-height: 1.6;
 
@@ -178,7 +179,7 @@
 
           & > p,
           & > blockquote p {
-            color: $amberm-doc-text-color;
+            color: $textColor;
             font-size: 15px;
             line-height: 26px;
 
@@ -190,7 +191,7 @@
           & > table {
             width: 100%;
             margin-top: 12px;
-            color: $amberm-doc-text-color;
+            color: $textColor;
             font-size: 14px;
             line-height: 1.5;
             border-collapse: collapse;
@@ -223,7 +224,7 @@
                   color: var(amberm-doc-blue);
                   font-weight: 600;
                   font-size: 11px;
-                  background-color: fade(var(amberm-doc-blue), 10%);
+                  background-color: $themeColor;
                   border-radius: 20px;
                 }
               }
@@ -253,7 +254,7 @@
             position: relative;
             margin: 5px 0 5px 10px;
             padding-left: 15px;
-            color: $amberm-doc-text-color;
+            color: $textColor;
             font-size: 15px;
             line-height: 26px;
 

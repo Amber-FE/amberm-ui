@@ -13,7 +13,7 @@
     padding: 10px  15px;
     background-color: $cell-background-color;
     &::after{
-        @include hairline-bottom($cell-border-color,var(--padding-md),var(--padding-md))
+        @include hairline-bottom($cell-border-color,var(--am-padding-md),var(--am-padding-md))
     }
     &:last-child::after{
         display: none;

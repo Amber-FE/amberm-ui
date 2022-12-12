@@ -65,6 +65,10 @@ export default {
               {
                 path: 'tab',
                 title: 'tab 标签页'
+              },
+              {
+                path: 'tabbar',
+                title: 'tabbar标签栏'
               }
             ]
           }

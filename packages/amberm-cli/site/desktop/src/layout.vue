@@ -18,4 +18,15 @@
     width: 100%;
     height: 100%;
   }
+  ::-webkit-scrollbar{
+    width: 8px;
+    height: 10px;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-track{
+    border-radius: 8px;
+  }
 </style>

@@ -2,10 +2,10 @@
 /* eslint-disable consistent-return */
 import { resolve } from 'path'
 
-import { slugify } from 'transliteration'
-import hljs from 'highlight.js'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import { slugify } from 'transliteration'
+import hljs from 'highlight.js'
 import markdownItAnchor from 'markdown-it-anchor'
 import markdownItEmoji from 'markdown-it-emoji'
 import markdownItInline from 'markdown-it-for-inline'

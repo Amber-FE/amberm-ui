@@ -13,6 +13,9 @@
   import { defineComponent, ref, watch, computed, onMounted, getCurrentInstance } from 'vue'
   import { useRoute, useRouter } from 'vue-router'
 
+  import { useCurrentTheme } from '../common/utils/iframe-router'
+  import { modeMap, modeMapArr } from '../common/utils/modeMap'
+
   export default defineComponent({
     name: 'App',
     setup() {
@@ -25,6 +28,15 @@
       const goBack = () => {
         router.back()
       }
+      const bodyStyle = window.document.getElementsByTagName('body')[0].style
+
+      const activeIndex = ref(+localStorage.getItem('themeIndex'))
+      onMounted(() => {
+        // eslint-disable-next-line no-restricted-syntax
+        for (const type of modeMapArr) {
+          bodyStyle.setProperty(type, modeMap[type][activeIndex.value])
+        }
+      })
 
       const methods = {
         sendToParent() {
@@ -43,10 +55,13 @@
         // console.log(window, '00s00s', route)
         window.addEventListener(
           'message',
-          (e) => {
-            console.log(e, 'ssjjsjsj')
-            // alert("iframe页面token失效了");
+          (event) => {
+            if (event.data?.type === 'updateTheme') {
+              const newTheme = event.data?.value || '0'
+              activeIndex.value = newTheme
+            }
           },
+          // alert("iframe页面token失效了");
           false
         )
         methods.sendToParent()
@@ -65,11 +80,22 @@
           console.log(route)
         }
       )
-      return { goBack, title, isShow, ...methods }
+      watch(
+        activeIndex,
+        (newVal) => {
+          // eslint-disable-next-line no-restricted-syntax
+          for (const type of modeMapArr) {
+            bodyStyle.setProperty(type, modeMap[type][activeIndex.value])
+          }
+        },
+        { immediate: true }
+      )
+      return { goBack, title, isShow, ...methods, activeIndex }
     }
   })
 </script>
 <style lang="scss">
+  @import '../common/style/common.scss';
   * {
     padding: 0;
     margin: 0;
@@ -89,7 +115,7 @@
   }
 
   #app {
-    background: #f1f1f1;
+    background: $themeColor1;
     height: 100%;
     width: 100%;
     display: flex;
@@ -103,10 +129,10 @@
       height: 57px;
       line-height: 57px;
       text-align: center;
-      background: #fff;
+      background: $themeColor1;
       font-weight: bold;
       font-size: 20px;
-      color: rgba(51, 51, 51, 1);
+      color: $textColor;
       box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.07);
       .back {
         position: absolute;
@@ -133,7 +159,7 @@
     .mobile-content {
       // height: 100%;
       margin-top: 20px;
-      background: #f7f8fa;
+      background: $themeColor1;
     }
     .nav-black {
       width: 100%;
@@ -142,7 +168,7 @@
 
     .demo {
       height: 100%;
-      background: #f7f8fa;
+      background: $themeColor1;
       overflow-x: hidden;
       overflow-y: auto;
       padding: 57px 17px 46px 17px;

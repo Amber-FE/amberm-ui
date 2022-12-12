@@ -4,6 +4,7 @@ export default {
   },
   header_nav: {
     design: '设计',
-    components: '组件'
+    components: '组件',
+    themes: '主题'
   }
 }

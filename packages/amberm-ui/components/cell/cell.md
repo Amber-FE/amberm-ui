@@ -44,8 +44,8 @@ app.use(CellGroup)
 
 ```js
 <am-cell-group title="分组1">
-  <am-cell title="标题" label="元素" value="内容" />
-  <am-cell required title="标题" />
+  <am-cell title="标题1" label="元素" value="内容" />
+  <am-cell required title="标题2" />
 </am-cell-group>
 ```
 

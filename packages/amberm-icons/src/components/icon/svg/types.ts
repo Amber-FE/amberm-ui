@@ -9,6 +9,5 @@ export const svgProps = {
   },
   color: {
     type: String,
-    default: '#000000'
   }
 }

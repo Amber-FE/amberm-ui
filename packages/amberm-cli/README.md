@@ -41,7 +41,7 @@ app.use(Button);
 ::: demo
 ``` vue
 
-<input>
+<input />
 
 ```
 :::

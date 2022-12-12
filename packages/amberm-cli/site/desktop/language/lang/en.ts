@@ -4,6 +4,7 @@ export default {
   },
   header_nav: {
     design: 'Design',
-    components: 'Components'
+    components: 'Components',
+    themes: 'Themes'
   }
 }

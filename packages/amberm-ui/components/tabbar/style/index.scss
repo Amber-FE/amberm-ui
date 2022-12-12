@@ -1,0 +1,19 @@
+:root{
+    --am-tabbar-height: 50px;
+    --am-tabber-z-index: 1;
+    --am-tabbar-background: var(--am-background-2)
+}
+.am-tabbar {
+    z-index: var(--am-tabbar-z-index);
+    display: flex;
+    box-sizing: content-box;
+    width: 100%;
+    height: var(--am-tabbar-height);
+    background: var(--am-tabbar-background);
+  
+    &--fixed {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+  }
