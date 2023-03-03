@@ -27,7 +27,8 @@
   window.addEventListener('scroll', onScroll)
   onScroll()
 
-  const path = location.pathname.split('/')[2]
+  const arr= location.pathname.split('/')
+   const path =  arr[arr.length-1]
 
   const url = ref(`${location.origin}/mobile.html?lang=${locale.value}&path=/${path ?? ''}`)
 
@@ -40,8 +41,9 @@
   watch(
     () => route.path,
     () => {
+      const urlArr = route.path.split('/')
       url.value = `${location.origin}/mobile.html?lang=${locale.value}&path=/${
-        route.path.split('/')[2] ?? ''
+        urlArr[urlArr.length-1]?? ''
       }`
     }
   )
