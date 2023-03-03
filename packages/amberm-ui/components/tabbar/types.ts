@@ -16,10 +16,10 @@ export const tabbarProps = {
     default: 1
   },
   activeColor: {
-    type: String,
+    type: String
   },
   inActiveColor: {
-    type: String,
+    type: String
   },
   route: {
     type: Boolean,

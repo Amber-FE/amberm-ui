@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
+    "jsx": "preserve",
     "composite": true,
     "module": "esnext",
     "moduleResolution": "node"
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts"],
+  "exclude": ["**/demo.vue",]
 }

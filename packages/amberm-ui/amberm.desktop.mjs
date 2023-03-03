@@ -52,6 +52,10 @@ export default {
               {
                 path: 'cell',
                 title: 'cell 单元格'
+              },
+              {
+                path: 'badge',
+                title: 'badge 徽标'
               }
             ]
           },

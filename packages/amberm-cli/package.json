@@ -10,7 +10,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "buildC": "amberm-cli buildC",
-    "dev":"cd ../amberm-ui && npm run dev"
+    "dev":"cd ../amberm-ui && npm run dev",
+    "build":"amberm-cli build"
 
     
   },

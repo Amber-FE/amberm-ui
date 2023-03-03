@@ -50,6 +50,13 @@
           "type": "component",
           "show": true,
           "desc": ""
+        },{
+          "name": "badge",
+          "sort": 1,
+          "cName": "徽标",
+          "type": "component",
+          "show": true,
+          "desc": ""
         }
       ]
     },

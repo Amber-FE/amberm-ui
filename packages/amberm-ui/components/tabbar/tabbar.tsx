@@ -1,5 +1,5 @@
 import { computed, defineComponent, provide, ref, watch } from 'vue'
-import type { CSSProperties, Ref } from 'vue'
+import type { Ref } from 'vue'
 
 import { useNameSpace } from '../../utils'
 
@@ -12,11 +12,14 @@ export default defineComponent({
   emits: ['change', 'update:modelValue', 'update:value'],
   setup(props, { slots, emit }) {
     const activeValue = ref(props.modelValue)
-    watch(()=>props.modelValue, (active) => {
-      activeValue.value =props.modelValue
-      emit('update:modelValue', active)
-      emit('change', active)
-    })
+    watch(
+      () => props.modelValue,
+      (active) => {
+        activeValue.value = props.modelValue
+        emit('update:modelValue', active)
+        emit('change', active)
+      }
+    )
     const defaultIndex: Ref<number> = ref(-1)
     const updateChild = (currentValue: number | string) => {
       activeValue.value = currentValue
@@ -40,7 +43,11 @@ export default defineComponent({
       inActiveColor: props.inActiveColor
     })
     return () => {
-      return <div style={{zIndex:props.ZIndex}} class={getClass.value}>{tabbarRender()}</div>
+      return (
+        <div style={{ zIndex: props.ZIndex }} class={getClass.value}>
+          {tabbarRender()}
+        </div>
+      )
     }
   }
 })

@@ -9,5 +9,6 @@ import Cell from './cell'
 import CellGroup from './cell-group'
 import Tabbar from './tabbar'
 import TabbarItem from './tabbarItem'
+import Badge from './badge/index.js'
 
-export { Button, Navbar, AmbermIcons, Tab, Cell, CellGroup, Tabbar, TabbarItem }
+export { Button, Navbar, AmbermIcons, Tab, Cell, CellGroup, Tabbar, TabbarItem, Badge }

@@ -9,8 +9,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "buildC": "amberm-cli buildC",
-    "dev":"amberm-cli dev"
+    "dev": "amberm-cli dev",
+    "build":"amberm-cli build"
   },
   "author": "liuqi",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^3.2.45"
+  }
 }

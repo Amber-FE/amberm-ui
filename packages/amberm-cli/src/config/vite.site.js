@@ -172,6 +172,26 @@ export function getViteConfigBuild() {
   return {
     base: './',
     root: SITE_SRC_DIR,
+    plugins: [
+      vitePluginGenAMbermBaseCode(),
+      vue({
+        include: [/\.vue$/, /\.md$/]
+      }),
+      mdLoader({
+        transforms: {
+          after: markdownCardWrapper
+        },
+        markdownItOptions: {
+          typographer: false, // https://markdown-it.github.io/markdown-it/#MarkdownIt
+          highlight: markdownHighlight
+        },
+        markdownItSetup(md) {
+          markdownBlock(md)
+          markdownLinkOpen(md)
+        }
+      }),
+      vueJsx()
+    ],
     build: {
       outDir: SITE_OUTPUT_DIR,
       emptyOutDir: true,
@@ -180,7 +200,12 @@ export function getViteConfigBuild() {
           index: resolve(SITE_SRC_DIR, 'index.html'),
           mobile: resolve(SITE_SRC_DIR, 'mobile.html')
         }
-      }
+      },
+      output: {
+        manualChunks: {
+          'vue-libs': ['vue', 'vue-router'],
+        },
+      },
     }
   }
 }

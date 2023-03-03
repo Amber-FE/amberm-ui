@@ -11,33 +11,32 @@
   </div>
   <div class="amberm-demo-relative">
     <div class="amberm-demo-text"> 自定义图标 </div>
-  <am-tabbar v-model="activeName"  @change="change">
-    <am-tabbar-item name="首页">
-      <template #icon="props">
-        <am-icon size="26" :name="props.isActive?'amberm-package':'amberm-desktop'" />
-      </template>
-    </am-tabbar-item>
-    <am-tabbar-item icon="amberm-desktop" name="我的" />
-    <am-tabbar-item icon="amberm-desktop" name="商城" />
-    <am-tabbar-item icon="amberm-desktop" name="分类" />
-    <am-tabbar-item icon="amberm-desktop" name="购物车" />
-  </am-tabbar>
+    <am-tabbar v-model="activeName" @change="change">
+      <am-tabbar-item name="首页">
+        <template #icon="props">
+          <am-icon size="26" :name="props.isActive ? 'amberm-package' : 'amberm-desktop'" />
+        </template>
+      </am-tabbar-item>
+      <am-tabbar-item icon="amberm-desktop" name="我的" />
+      <am-tabbar-item icon="amberm-desktop" name="商城" />
+      <am-tabbar-item icon="amberm-desktop" name="分类" />
+      <am-tabbar-item icon="amberm-desktop" name="购物车" />
+    </am-tabbar>
   </div>
-<div class="amberm-demo-relative">
-  <div class="amberm-demo-text"> 自定义颜色 </div>
-  <am-tabbar v-model="activeName" in-active-color="green" active-color="red" @change="change">
-    <am-tabbar-item name="首页">
-      <template #icon="props">
-        <am-icon size="26" :name="props.isActive?'amberm-package':'amberm-desktop'" />
-      </template>
-    </am-tabbar-item>
-    <am-tabbar-item icon="amberm-desktop"  name="我的" />
-    <am-tabbar-item icon="amberm-desktop" name="商城" />
-    <am-tabbar-item icon="amberm-desktop" name="分类" />
-    <am-tabbar-item icon="amberm-desktop" name="购物车" />
-  </am-tabbar>
-</div>
-  
+  <div class="amberm-demo-relative">
+    <div class="amberm-demo-text"> 自定义颜色 </div>
+    <am-tabbar v-model="activeName" in-active-color="green" active-color="red" @change="change">
+      <am-tabbar-item name="首页">
+        <template #icon="props">
+          <am-icon size="26" :name="props.isActive ? 'amberm-package' : 'amberm-desktop'" />
+        </template>
+      </am-tabbar-item>
+      <am-tabbar-item icon="amberm-desktop" name="我的" />
+      <am-tabbar-item icon="amberm-desktop" name="商城" />
+      <am-tabbar-item icon="amberm-desktop" name="分类" />
+      <am-tabbar-item icon="amberm-desktop" name="购物车" />
+    </am-tabbar>
+  </div>
 </template>
 
 <script lang="ts">
@@ -50,10 +49,10 @@
       const change = (val) => {
         console.log(val)
       }
-      const changes = ()=> {
-        activeName.value="购物车"
+      const changes = () => {
+        activeName.value = '购物车'
       }
-      return { activeName, change ,changes }
+      return { activeName, change, changes }
     }
   })
 </script>
@@ -62,7 +61,7 @@
   .amberm-demo-text {
     margin: 10px;
   }
-  .amberm-demo-relative .am-tabbar{
-    position: relative;;
+  .amberm-demo-relative .am-tabbar {
+    position: relative;
   }
 </style>

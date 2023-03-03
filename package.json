@@ -14,7 +14,7 @@
   },
   "scripts": {
     "dev": "cd ./packages/amberm-ui && npm run dev",
-    "build": "cd example && vue-tsc --noEmit && vite build",
+    "build": "cd ./packages/amberm-ui && vue-tsc --noEmit && vite build",
     "buildC": "amberm-cli buildC",
     "rollup": "rollup -c ./script/rollup.config.js",
     "lint:fix": "eslint packages --fix --ext .ts,.tsx",
