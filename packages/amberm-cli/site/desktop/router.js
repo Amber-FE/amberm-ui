@@ -1,5 +1,5 @@
 // import type { RouteRecordRaw } from 'vue-router'
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory,createWebHashHistory } from 'vue-router'
 // import Button from 'amberm-ui/packages/amberm-ui/components/button/button.md'
 import { config, documents } from 'site-desktop-shared'
 import { nextTick } from 'vue'
@@ -89,7 +89,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
 })
 router.afterEach(() => {

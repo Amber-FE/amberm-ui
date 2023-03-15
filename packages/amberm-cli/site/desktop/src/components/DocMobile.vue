@@ -28,7 +28,9 @@
   onScroll()
 
   const path = location.pathname.split('/')[2]
+  console.log(location.origin);
   const origin = location.origin.includes('github')? `${location.origin}/amberm-ui`:`${location.origin}`
+  console.log(route);
   const url = ref(`${origin}/mobile.html?lang=${locale.value}&path=/${path ?? ''}`)
   watch(
     () => locale.value,

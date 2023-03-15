@@ -170,7 +170,7 @@ export function getViteConfigDev() {
 
 export function getViteConfigBuild() {
   return {
-    base: './',
+    base: '/amberm-ui/',
     root: SITE_SRC_DIR,
     plugins: [
       vitePluginGenAMbermBaseCode(),
@@ -200,11 +200,6 @@ export function getViteConfigBuild() {
           index: resolve(SITE_SRC_DIR, 'index.html'),
           mobile: resolve(SITE_SRC_DIR, 'mobile.html')
         }
-      },
-      output: {
-        manualChunks: {
-          'vue-libs': ['vue', 'vue-router'],
-        },
       },
     }
   }
